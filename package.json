@@ -1,0 +1,32 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "blog app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caishijian2008/blogapp.git"
+  },
+  "author": "csj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caishijian2008/blogapp/issues"
+  },
+  "homepage": "https://github.com/caishijian2008/blogapp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.1.0",
+    "jshint": "^2.9.4"
+  },
+  "keywords": [
+    "blog",
+    "app"
+  ]
+}

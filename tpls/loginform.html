@@ -1,0 +1,32 @@
+<div class="container">
+	<form class="form-horizontal" role="form" ng-controller="loginCtrl" novalidate>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">邮箱</label>
+			<div class="col-sm-10">
+				<input type="email" class="form-control" id="email" placeholder="邮箱地址" ng-model="user.uemail">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">密码</label>
+			<div class="col-sm-10">
+				<input type="password" class="form-control" id="password" placeholder="密码" ng-model="user.upassword">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" ng-model="user.rememberme">记住我
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-default" ng-click="loginClick()">登陆</button>
+			</div>
+		</div>
+		<p>{{user}}</p>
+
+	</form>
+</div>
