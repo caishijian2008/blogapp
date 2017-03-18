@@ -1,32 +1,40 @@
-<div class="container">
-	<form class="form-horizontal" role="form" ng-controller="loginCtrl" novalidate>
-		<div class="form-group">
-			<label class="col-sm-2 control-label">邮箱</label>
-			<div class="col-sm-10">
-				<input type="email" class="form-control" id="email" placeholder="邮箱地址" ng-model="user.uemail">
+<form class="form-horizontal" role="form" ng-controller="loginCtrl" name="myForm" novalidate>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">邮箱</label>
+		<div class="col-sm-10">
+			<input type="email" name="email" class="form-control" id="email" placeholder="邮箱地址" ng-model="user.uemail" required>
+			<span style="color: red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+				<span ng-show="myForm.email.$error.required">邮箱是必须的</span>
+				<span ng-show="myForm.email.$error.email">非法的邮箱</span>
+			</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">密码</label>
+		<div class="col-sm-10">
+			<input type="password" name="password" class="form-control" id="password" placeholder="密码" ng-model="user.upassword" required>
+			<span style="color: red" ng-show="myForm.password.$dirty && myForm.password.$invalid">
+				<span ng-show="myForm.password.$error.required">密码是必须的</span>
+			</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-4">
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" ng-model="user.rememberme">记住我
+				</label>
 			</div>
 		</div>
-		<div class="form-group">
-			<label class="col-sm-2 control-label">密码</label>
-			<div class="col-sm-10">
-				<input type="password" class="form-control" id="password" placeholder="密码" ng-model="user.upassword">
-			</div>
+		<div class="col-sm-offset-2 col-sm-4">
+			<span><a href="tpls/regpage.html">注册用户</a></span>
 		</div>
-		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" ng-model="user.rememberme">记住我
-					</label>
-				</div>
-			</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-default" ng-disabled="myForm.email.$dirty && myForm.email.$invalid || myForm.password.$dirty && myForm.password.$invalid" ng-click="loginClick()">登陆</button>
 		</div>
-		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
-				<button type="submit" class="btn btn-default" ng-click="loginClick()">登陆</button>
-			</div>
-		</div>
-		<p>{{user}}</p>
+	</div>
+	<p>{{user}}</p>
 
-	</form>
-</div>
+</form>

@@ -3,8 +3,9 @@
 /* media css Document */
 
 @media screen and (max-width:823px) {
+    /* background: url(../images/ms8.png) top right no-repeat #FFF; */
     .ibody {
-        background: url(../images/ms8.png) top right no-repeat #FFF;
+        background: transparent;
         width: 90%;
         margin: auto;
         box-shadow: 0px 2px 5px #666;
@@ -17,7 +18,8 @@
         background: #fff
     }
     header {
-        background: url(../images/ms8.png) top right no-repeat #FFF;
+        /* background: url(../images/ms8.png) top right no-repeat #FFF; */
+        background: transparent;
     }
     aside,
     .dateview {
@@ -28,7 +30,7 @@
         text-align: center
     }
     nav a {
-        padding: 0 5px;
+        padding: 0 15px;
     }
     .banner {
         background-size: auto;
@@ -38,7 +40,7 @@
     }
     .texts {
         line-height: 36px;
-        padding: 20px 0 0 10px;
+        padding: 20px 0 0 5px;
         text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
     }
     .blogs::after {
@@ -57,7 +59,8 @@
 
 @media screen and (max-width:598px) {
     .ibody {
-        background: url(../images/ms8.png) top right no-repeat #FFF;
+        /* background: url(../images/ms8.png) top right no-repeat #FFF; */
+        background: transparent;
         width: 90%;
         margin: auto;
         box-shadow: 0px 2px 5px #666;
@@ -70,7 +73,8 @@
         background: #fff
     }
     header {
-        background: url(../images/ms8.png) top right no-repeat #FFF;
+        /* background: url(../images/ms8.png) top right no-repeat #FFF; */
+        background: transparent;
     }
     aside,
     header h1,
@@ -103,7 +107,7 @@
     }
     .texts {
         line-height: 36px;
-        padding: 20px 0 0 10px;
+        padding: 20px 0 0 5px;
         text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
     }
     .blogs::after {
@@ -134,7 +138,8 @@
         background: #fff
     }
     header {
-        background: url(../images/ms8.png) top right no-repeat #FFF;
+        /* background: url(../images/ms8.png) top right no-repeat #FFF; */
+        background: transparent;
     }
     aside,
     header h1,
@@ -166,7 +171,7 @@
     }
     .texts {
         line-height: 36px;
-        padding: 20px 0 0 10px;
+        padding: 20px 0 0 5px;
         text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
     }
     .blogs::after,

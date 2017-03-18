@@ -68,7 +68,8 @@ a:hover {
 
 header {
     position: relative;
-    background: url(../images/ibodybg.png) top right no-repeat
+    /* background: url(../images/ibodybg.png) top right no-repeat; */
+    background: transparent;
 }
 
 header h1 {
@@ -124,8 +125,8 @@ nav a {
     display: inline-block;
     font-size: 18px;
     font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
-    color: #FFF;
-    padding: 0 20px;
+    color: #fff;
+    padding: 0 30px;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -o-transition: all 1s;
@@ -146,7 +147,8 @@ nav a:hover {
 article {
     width: 73%;
     float: left;
-    background: url(../images/ibodybg.png) 560px -147px no-repeat;
+    /* background: url(../images/ibodybg.png) 560px -147px no-repeat; */
+    background: transparent;
 }
 
 
@@ -154,7 +156,8 @@ article {
 
 aside {
     width: 27%;
-    background: url(../images/ibodybg.png) -170px -147px no-repeat #000;
+    /* background: url(../images/ibodybg.png) -170px -147px no-repeat #000; */
+    background: transparent;
     float: right;
 }
 
