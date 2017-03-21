@@ -337,7 +337,7 @@ a.readmore {
 }
 
 .pl_n dt img:hover {
-    -webkit-transform: rotate(360deg);
+    -webkit-transform: rotate(30deg);
     -ms-transform: rotate(30deg);
     -moz-transform: rotate(30deg);
     -o-transform: rotate(30deg);
