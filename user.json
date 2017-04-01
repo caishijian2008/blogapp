@@ -1,0 +1,21 @@
+[{
+  "id":"1",
+  "username": "admin",
+  "password": "123456",
+  "email":"admin@qq.com",
+  "photo": "001.jpg"
+},
+{
+  "id":"2",
+  "username": "zhangsan",
+  "password": "123456",
+  "email":"zhangsan@qq.com",
+  "photo": "002.jpg"
+},
+{
+  "id":"3",
+  "username": "lisi",
+  "password": "123456",
+  "email":"lisi@qq.com",
+  "photo": "003.jpg"
+}]

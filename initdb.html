@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">  
+<title>初始化数据库</title> 
+
+</head>
+<body>
+  <div>状态信息：</div>
+  <div id="status" name="status">状态信息</div>
+  <p id="msg"></p>
+
+  <script src="lib/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript">
+
+     var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+     var msg;
+     
+     db.transaction(function (tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS USER (id unique, username, password)');
+        tx.executeSql('INSERT INTO USER (id, username) VALUES (1, "菜鸟教程")');
+        tx.executeSql('INSERT INTO USER (id, username) VALUES (2, "www.runoob.com")');
+        msg = '<p>数据表已创建，且插入了两条数据。</p>';
+        document.querySelector('#status').innerHTML +=  msg;
+     });
+
+     /*db.transaction(function (tx) {
+          tx.executeSql('DELETE FROM LOGS  WHERE id=1');
+          msg = '<p>删除 id 为 1 的记录。</p>';
+          document.querySelector('#status').innerHTML =  msg;
+     });*/
+
+     db.transaction(function (tx) {
+         tx.executeSql('UPDATE USER SET username=\'runoob.com\' WHERE id=2');
+          msg = '<p>更新 id 为 2 的记录。</p>';
+          document.querySelector('#status').innerHTML +=  msg;
+     });
+
+     db.transaction(function (tx) {
+        tx.executeSql('SELECT * FROM USER', [], function (tx, results) {
+           var len = results.rows.length, i;
+           msg = "<p>查询记录条数: " + len + "</p>";
+           document.querySelector('#status').innerHTML +=  msg;
+           
+           for (i = 0; i < len; i++){
+              msg = "<p><b>" + results.rows.item(i).log + "</b></p>";
+              document.querySelector('#status').innerHTML +=  msg;
+           }
+        }, null);
+     });
+     
+     /* 使用原生js实现的ajax */
+     (function() {
+        var request = new XMLHttpRequest();
+        request.open("GET", "text.json");
+        request.send(null);
+        request.onreadystatechange = function() {
+            if (request.readyState === 4 && request.status ===200) {
+               var data = JSON.parse(request.responseText);
+               document.getElementById('msg').innerHTML = data.title;
+            } else {
+               document.getElementById('msg').innerHTML = "请求出错";
+            }
+        };
+     })();
+
+     /* 使用jq实现的ajax */
+     // $(function() {
+     //    $.ajax({
+     //      url: 'text.json',
+     //      type: 'GET',
+     //      dataType: 'json',
+     //      //data: {param1: 'value1'},
+     //      success: function(data) {
+     //        $('#msg').text(data.abstracts);
+     //      },
+     //      error: function(err){
+     //        alert("发生错误：" + err.status);
+     //      }
+     //    })
+     //    .done(function() {
+     //      console.log("success");
+     //    })
+     //    .fail(function() {
+     //      console.log("error");
+     //    })
+     //    .always(function() {
+     //      console.log("complete");
+     //    });
+        
+     // });
+  </script>
+</body>
+</html>

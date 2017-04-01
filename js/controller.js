@@ -1,8 +1,8 @@
 var loginCtrl = angular.module('loginCtrl', []);
 loginCtrl.controller('loginCtrl', ['$scope', function($scope){
 	$scope.user = {
-		uemail: "123456@qq.com",
-		upassword: "123456",
+		uemail: "",
+		upassword: "",
 		rememberme: true
 	};
 	$scope.loginClick = function() {

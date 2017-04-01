@@ -2,7 +2,7 @@
 	<div class="form-group">
 		<label class="col-sm-2 control-label">邮箱</label>
 		<div class="col-sm-10">
-			<input type="email" name="email" class="form-control" id="email" placeholder="邮箱地址" ng-model="user.uemail" required>
+			<input type="email" name="email" class="form-control" id="email" placeholder="邮箱地址" maxlength="50" ng-model="user.uemail" required>
 			<span style="color: red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
 				<span ng-show="myForm.email.$error.required">邮箱是必须的</span>
 				<span ng-show="myForm.email.$error.email">非法的邮箱</span>
@@ -12,7 +12,7 @@
 	<div class="form-group">
 		<label class="col-sm-2 control-label">密码</label>
 		<div class="col-sm-10">
-			<input type="password" name="password" class="form-control" id="password" placeholder="密码" ng-model="user.upassword" required>
+			<input type="password" name="password" class="form-control" id="password" placeholder="密码" maxlength="20" ng-model="user.upassword" required>
 			<span style="color: red" ng-show="myForm.password.$dirty && myForm.password.$invalid">
 				<span ng-show="myForm.password.$error.required">密码是必须的</span>
 			</span>
