@@ -17,6 +17,7 @@
      var msg;
      
      db.transaction(function (tx) {
+        alert(tx);
         tx.executeSql('CREATE TABLE IF NOT EXISTS USER (id unique, username, password)');
         tx.executeSql('INSERT INTO USER (id, username) VALUES (1, "菜鸟教程")');
         tx.executeSql('INSERT INTO USER (id, username) VALUES (2, "www.runoob.com")');
