@@ -91,12 +91,17 @@ span.log {
   outline: none;
   font-size: 15px;
   font-weight: 600;
-  color: #BBBBBB;
+  /* color: #BBBBBB; */
   padding: 17px 15px 17px 15px;
   border: none;
-  width: 85%;
+  width: 100%;
   height: inherit;
   -webkit-appearance: none;
+}
+
+.user .error, .user-in .error {
+  color: red;
+  
 }
 
 label.checkbox {
@@ -210,11 +215,32 @@ label.checkbox {
   padding: 6px 0px;
   width: 100%;
 }
+.keepme .regist {
+  font-size: 17px;
+  font-weight: 600;
+  width: 100%;
+  padding: 8px 26px;
+  margin: 0;
+  display: inline-block;
+  outline: none;
+  border: none;
+  text-align: center !important;
+}
+
+.keepme .regist input[type="submit"] {
+  width: 80%;
+  font-size: 17px;
+  font-weight: 600;
+}
+
 .forgot {
   padding: 15px 0px;
 }
 .forgot p {
   float: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #878787;
 }
 .forgot p a{
   font-size: 14px;
@@ -245,6 +271,17 @@ label.checkbox {
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
   -o-transition: 0.5s all;
+}
+.backon {
+  /* margin-left: -23px;
+  margin-right: -23px; */
+  background-color: #398439;
+  padding: 10px 0;
+}
+.backon p, .backon p a {
+  color: #fff;
+  text-align: center !important;
+  border-radius: 0px 0px 5px 5px;
 }
 span.login-line {
   background: #EFEDED;

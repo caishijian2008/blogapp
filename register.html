@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>登录——个人博客</title>
 <meta name="keywords" content="个人博客,博客,响应式" />
-<meta name="description" content="个人博客，登陆" />
+<meta name="description" content="个人博客，注册" />
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -17,36 +17,40 @@
 <div class="login">
     <div class="login-top">
         <h2>欢迎</h2>
-        <h3>登录</h3>
+        <h3>注册</h3>
     </div>
     <div class="login-bottom">
-        <form class="form-horizontal" id="loginform" method="post" role="form">
+        <form class="form-horizontal" id="signupform" method="post" role="form">
             <div class="user form-group">
-                <input type="text" id="username" name="username" class="form-control" placeholder="用户名">
+                <input type="text" class="form-control" id="email" name="email" placeholder="邮箱">
+            </div>
+            
+            <div class="user form-group">
+                <input type="text" class="form-control" id="username" name="username" placeholder="用户名">
             </div>
             <div class="user-in form-group">
-                <input type="password" id="password" name="password" class="form-control" placeholder="密码">
+                <input type="password" class="form-control" id="password" name="password" placeholder="密码">
+            </div>
+            <div class="user-in form-group">
+                <input type="password" class="form-control" id="repassword" name="repassword" placeholder="确认密码">
             </div>
             <div class="keepme">
-                <label class="checkbox"><input type="checkbox" id="keepon" name="keepon">记住我</label>
-                <div class="keep-loginbutton">
-                    <input type="submit" value="登录" />
+                <div class="regist">
+                    <input type="submit" class="btn btn-danger" value="注册" />
                 </div>
                 <div class="clear"> </div>
             </div>
         </form>
-        <div class="forgot">
-            <p><a href="#">忘记密码?</a></p>
-            <div class="forgot-register">
-                <p>还没有注册? <a href="register.html">点击注册</a></p>
-            </div>
+        
+    </div>
+    <div class="backon">
+            <p><a href="login.html">返回登陆</a></p>
             <div class="clear"> </div>
         </div>
-    </div>
 </div>
 <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 <script type="text/javascript" src="js/jquery.validate.js"></script>
 <script type="text/javascript" src="js/messages_zh.js"></script>
-<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
 </body>
 </html>
