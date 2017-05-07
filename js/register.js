@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+$(document).ready(function($) {
 
 	/* 自定义的验证方法 */
     jQuery.validator.addMethod("regexp",function(value, element) {
@@ -7,8 +7,9 @@ jQuery(document).ready(function($) {
 
     $('#signupform').validate({
     	submitHandler: function(form) {
-    		alert("注册成功！");
-    		$(form).ajaxSubmit();
+    		// alert("注册成功！");
+    		// $(form).ajaxSubmit();
+            form.submit();
     	},
     	rules: {
     		email: {
@@ -51,5 +52,78 @@ jQuery(document).ready(function($) {
     		}
     	}
     });
+
+    // 检查IndexedDB支持情况
+    window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+    if(!window.indexedDB){
+        console.log("你的浏览器不支持IndexedDB");
+    }
+
+    
+    $("#signup").on('click', function(event) {
+        // event.preventDefault();
+        
+        var txtEmail = $('#email').val();
+        var txtUsername = $('#username').val();
+        var txtPassword = $('#password').val();
+
+        // 仅做参考
+        // $.post('/path/to/register.jsp', {"email": txtEmail,"username":txtUsername,"password":txtPassword}, function(data, textStatus, xhr) {
+        //     /*optional stuff to do after success */
+        // });
+
+        $.ajax({
+            url: 'http://localhost:8080/blogserv/ajax/register.jsp',
+            type: 'POST',
+            method: "POST",
+            dataType: 'json',
+            data: {
+                email: txtEmail,
+                username: txtUsername,
+                password: txtPassword
+            },
+            success: function(data) {
+                alert("发送成功：" + data.msg);
+                window.location.href="";
+            },
+            error: function(jqXHR) {
+                console.log("数据发送错误："+jqXHR.status);
+            }
+        })
+        .done(function(msg) {
+            console.log("success: "+msg.status);
+        })
+        .fail(function(msg) {
+            console.log("error: "+msg.status);
+        })
+        .always(function() {
+            console.log("complete");
+        });
+        
+    });
+
+
+    // 采用websql方式
+    // // 初始化数据库
+    // initDatabase();
+    
+    // $('#signup').on('click', function(event) {
+    //     // event.preventDefault();
+    //     /* Act on the event */
+    //     var txtEmail = $('#email').val();
+    //     var txtUsername = $('#username').val();
+    //     var txtPassword = $('#password').val();
+        
+    //     var db = createDatabase();
+    //     db.transaction(function(tx) {
+    //         tx.executeSql("insert into user(email, username, password) values(?,?,?)", [txtEmail,txtUsername,txtPassword], 
+    //             function(ts,data) {console.log('data: '+data)/*alert('data:'+data)*/;}, 
+    //             function(ts,message) { 
+    //                 alert('message:'+message);
+    //             }
+    //         );
+    //     });
+
+    // });
     
 });
