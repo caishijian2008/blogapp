@@ -34,4 +34,31 @@ jQuery(document).ready(function($) {
     	}
     });
     
+	if (typeof(Storage) !== "undefined") {
+		sessionStorage.clear();
+		localStorage.clear();
+		$("#signin").on("click", function () {
+			var txtUsername = $('#username').val();
+			var txtPassword = $('#password').val();
+			sessionStorage.setItem("usrname",txtUsername);
+			alert(sessionStorage.getItem('usrname'));
+
+			$.ajax({
+				type: "POST",
+				url: "http://localhost:8080/blogserv/validate.jsp",
+				dataType: "json",
+				data: {
+					username: txtUsername,
+                    password: txtPassword
+				},
+				success: function (response) {
+					
+				},
+                error: function (jqXHR) {}
+			});
+		});
+	} else {
+		alert("你的浏览器不支持web存储！");
+		console.log("你的浏览器不支持web存储！");
+	}
 });

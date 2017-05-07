@@ -73,7 +73,7 @@ $(document).ready(function($) {
         // });
 
         $.ajax({
-            url: 'http://localhost:8080/blogserv/ajax/register.jsp',
+            url: 'http://localhost:8080/blogserv/register.jsp',
             type: 'POST',
             method: "POST",
             dataType: 'json',
@@ -84,7 +84,7 @@ $(document).ready(function($) {
             },
             success: function(data) {
                 alert("发送成功：" + data.msg);
-                window.location.href="";
+                window.location.href="register.html";
             },
             error: function(jqXHR) {
                 console.log("数据发送错误："+jqXHR.status);
