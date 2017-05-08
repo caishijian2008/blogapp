@@ -7,7 +7,7 @@ $(document).ready(function($) {
 
     $('#signupform').validate({
     	submitHandler: function(form) {
-    		// alert("注册成功！");
+    		alert("注册成功！");
     		// $(form).ajaxSubmit();
             form.submit();
     	},
@@ -73,20 +73,22 @@ $(document).ready(function($) {
         // });
 
         $.ajax({
-            url: 'http://localhost:8080/blogserv/register.jsp',
+            url: 'http://localhost:8080/blogserv/getUsersServlet',
             type: 'POST',
-            method: "POST",
             dataType: 'json',
+            cache: false,
             data: {
-                email: txtEmail,
-                username: txtUsername,
-                password: txtPassword
+                "email": txtEmail,
+                "username": txtUsername,
+                "password": txtPassword
             },
             success: function(data) {
+                alert("发送成功：" + data);
                 alert("发送成功：" + data.msg);
-                window.location.href="register.html";
+                window.location.href="login.html";
             },
             error: function(jqXHR) {
+                alert("数据发送错误："+jqXHR);
                 console.log("数据发送错误："+jqXHR.status);
             }
         })
