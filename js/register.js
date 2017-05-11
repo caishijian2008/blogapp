@@ -7,7 +7,7 @@ $(document).ready(function($) {
 
     $('#signupform').validate({
     	submitHandler: function(form) {
-    		alert("注册成功！");
+    		// alert("注册成功！");
     		// $(form).ajaxSubmit();
             form.submit();
     	},
@@ -66,6 +66,14 @@ $(document).ready(function($) {
         var txtEmail = $('#email').val();
         var txtUsername = $('#username').val();
         var txtPassword = $('#password').val();
+        var txtRepassword = $('#repassword').val();
+        // alert(txtRepassword.length);
+        // if (txtEmail.length <= 0) { return ; } 
+        // if (txtUsername.length <= 0) { return ; } 
+        // if (txtPassword.length <= 0) { return ; } 
+        // if (txtPassword != txtRepassword ) { return ; } 
+        // if (txtRepassword.length <= 0) { return ; } 
+
 
         // 仅做参考
         // $.post('/path/to/register.jsp', {"email": txtEmail,"username":txtUsername,"password":txtPassword}, function(data, textStatus, xhr) {
@@ -75,7 +83,7 @@ $(document).ready(function($) {
         $.ajax({
             url: 'http://localhost:8080/blogserv/getUsersServlet',
             type: 'POST',
-            dataType: 'json',
+            dataType: 'jsonp',
             cache: false,
             data: {
                 "email": txtEmail,
@@ -83,13 +91,13 @@ $(document).ready(function($) {
                 "password": txtPassword
             },
             success: function(data) {
-                alert("发送成功：" + data);
+                alert("发送成功：" + data.status);
                 alert("发送成功：" + data.msg);
-                window.location.href="login.html";
+                window.location.href="./login.html";
             },
             error: function(jqXHR) {
-                alert("数据发送错误："+jqXHR);
-                console.log("数据发送错误："+jqXHR.status);
+                alert(jqXHR.statusText);
+                window.location.href="./register.html";
             }
         })
         .done(function(msg) {
