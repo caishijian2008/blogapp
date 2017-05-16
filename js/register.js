@@ -63,10 +63,10 @@ $(document).ready(function($) {
     $("#signup").on('click', function(event) {
         // event.preventDefault();
         
-        var txtEmail = $('#email').val();
-        var txtUsername = $('#username').val();
-        var txtPassword = $('#password').val();
-        var txtRepassword = $('#repassword').val();
+        var txtEmail = $('#email').val().trim();
+        var txtUsername = $('#username').val().trim();
+        var txtPassword = $('#password').val().trim();
+        var txtRepassword = $('#repassword').val().trim();
         // alert(txtRepassword.length);
         // if (txtEmail.length <= 0) { return ; } 
         // if (txtUsername.length <= 0) { return ; } 
@@ -76,8 +76,11 @@ $(document).ready(function($) {
 
 
         // 仅做参考
-        // $.post('/path/to/register.jsp', {"email": txtEmail,"username":txtUsername,"password":txtPassword}, function(data, textStatus, xhr) {
+        // $.post('http://localhost:8080/blogserv/getUsersServlet', {"email": txtEmail,"username":txtUsername,"password":txtPassword}, function(data, textStatus, xhr) {
         //     /*optional stuff to do after success */
+        //     alert("data:"+data.msg);
+        //     alert("data:"+textStatus);
+        //     alert("data:"+xhr);
         // });
 
         $.ajax({

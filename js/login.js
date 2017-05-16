@@ -7,8 +7,7 @@ jQuery(document).ready(function($) {
 
     $('#loginform').validate({
     	submitHandler: function(form) {
-    		alert("登陆成功！");
-    		$(form).ajaxSubmit();
+    		form.submit();
     	},
     	rules: {
     		username: {
@@ -38,23 +37,38 @@ jQuery(document).ready(function($) {
 		sessionStorage.clear();
 		localStorage.clear();
 		$("#signin").on("click", function () {
-			var txtUsername = $('#username').val();
-			var txtPassword = $('#password').val();
-			sessionStorage.setItem("usrname",txtUsername);
-			alert(sessionStorage.getItem('usrname'));
-
+			var txtUsername = $('#username').val().trim();
+			var txtPassword = $('#password').val().trim();
+			sessionStorage.setItem("username",txtUsername);
+			// alert(sessionStorage.getItem('username'));
+            
+			// var param = "http://localhost:8080/blogserv/loginServlet?action=login&username="+txtUsername+"&password="+txtPassword;
+			var param = "http://localhost:8080/blogserv/loginServlet?action=login";
+			// alert(param);
 			$.ajax({
 				type: "POST",
-				url: "http://localhost:8080/blogserv/validate.jsp",
+				url: param,
 				dataType: "json",
 				data: {
-					username: txtUsername,
-                    password: txtPassword
+					"username": txtUsername,
+                    "password": txtPassword
 				},
-				success: function (response) {
-					
+				success: function (data) {
+					if (data == false) {
+						alert("用户名或密码错误！");
+						$('#username').focus(); 
+						return false;
+					} else {
+						alert("登陆成功！");
+						// window.location.href = "./index.html";
+						location.href = "./index.html";
+					}
 				},
-                error: function (jqXHR) {}
+                error: function (jqXHR) {
+					alert("错误: "+jqXHR.statusText);
+					// window.location.href = "./login.html";
+					location.href = "./login.html";
+				}
 			});
 		});
 	} else {
