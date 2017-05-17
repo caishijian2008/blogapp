@@ -74,19 +74,10 @@ $(document).ready(function($) {
         // if (txtPassword != txtRepassword ) { return ; } 
         // if (txtRepassword.length <= 0) { return ; } 
 
-
-        // 仅做参考
-        // $.post('http://localhost:8080/blogserv/getUsersServlet', {"email": txtEmail,"username":txtUsername,"password":txtPassword}, function(data, textStatus, xhr) {
-        //     /*optional stuff to do after success */
-        //     alert("data:"+data.msg);
-        //     alert("data:"+textStatus);
-        //     alert("data:"+xhr);
-        // });
-
         $.ajax({
-            url: 'http://localhost:8080/blogserv/getUsersServlet',
+            url: 'http://localhost:8080/blogserv/getUsersServlet?action=register',
             type: 'POST',
-            dataType: 'jsonp',
+            dataType: 'json',
             cache: false,
             data: {
                 "email": txtEmail,
@@ -94,24 +85,26 @@ $(document).ready(function($) {
                 "password": txtPassword
             },
             success: function(data) {
-                alert("发送成功：" + data.status);
-                alert("发送成功：" + data.msg);
-                window.location.href="./login.html";
+                alert(data.msg);
+                // window.location.href="./login.html";
+                location.href="./login.html";
             },
             error: function(jqXHR) {
-                alert(jqXHR.statusText);
-                window.location.href="./register.html";
+                alert("错误："+ jqXHR.status);
+                // window.location.href="./register.html";
+                location.href="./register.html";
             }
         })
-        .done(function(msg) {
-            console.log("success: "+msg.status);
-        })
-        .fail(function(msg) {
-            console.log("error: "+msg.status);
-        })
-        .always(function() {
-            console.log("complete");
-        });
+        // .done(function(msg) {
+        //     console.log("success: "+msg.status);
+        // })
+        // .fail(function(msg) {
+        //     console.log("error: "+msg.status);
+        // })
+        // .always(function() {
+        //     console.log("complete");
+        // })
+        ;
         
     });
 

@@ -34,8 +34,8 @@ jQuery(document).ready(function($) {
     });
     
 	if (typeof(Storage) !== "undefined") {
-		sessionStorage.clear();
-		localStorage.clear();
+		// sessionStorage.clear();
+		// localStorage.clear();
 		$("#signin").on("click", function () {
 			var txtUsername = $('#username').val().trim();
 			var txtPassword = $('#password').val().trim();
