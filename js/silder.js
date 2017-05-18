@@ -31,9 +31,13 @@ obj.id='topnav_current';
   if (typeof(Storage) !== "undefined") {
     var uname = sessionStorage.getItem('username');
     document.getElementById("uname").innerHTML = uname;
-    $('h5 a').click(function() {
+    $(".inout").attr("style","display:none;");
+    $(".logout").attr("style","display:;");
+    $('.logout').click(function() {
       alert("你已经下线了！");
       sessionStorage.clear();
+      $(".inout").attr("style","display:;");
+      $(".logout").attr("style","display:none;");
     });
   } else {
     alert("你的浏览器不支持web存储！");
