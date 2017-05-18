@@ -27,3 +27,14 @@ obj.id='topnav_current';
     $("html, body").animate({scrollTop: 0}, 300); 
     return false; 
   }); 
+
+  if (typeof(Storage) !== "undefined") {
+    var uname = sessionStorage.getItem('username');
+    document.getElementById("uname").innerHTML = uname;
+    $('h5 a').click(function() {
+      sessionStorage.clear();
+    });
+  } else {
+    alert("你的浏览器不支持web存储！");
+		console.log("你的浏览器不支持web存储！");
+  }

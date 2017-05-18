@@ -80,9 +80,30 @@ header h1 {
 
 header h2 {
     margin: 20px 80px;
-    color: #8e8d8d
+    color: #8e8d8d;
 }
 
+header .leftheader {
+    float: left;
+    width: 73%;
+}
+
+header .rightheader {
+    float: right; 
+    width: 27%; 
+    color: #fff; 
+}
+
+header .rightheader h5 {
+    text-align: center;
+    padding: 15px 0 15px;
+    background-color: #222;
+}
+
+header .rightheader h5 a:link, 
+header .rightheader h5 a:visited {
+    color: #fff;
+}
 
 /* logo */
 
@@ -135,6 +156,10 @@ nav a {
 
 nav a:hover {
     background: #e41635;
+}
+
+#topnav {
+    clear: both;
 }
 
 #topnav_current {
@@ -199,4 +224,17 @@ aside {
     background: #fff url(../images/gotop.png) no-repeat 10px 10px;
     cursor: pointer;
     border-radius: 6px;
+}
+
+.footer {
+    height: 130px;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+    /*box-shadow: -2px -1px 5px #666;*/
+    text-align: center;
+}
+
+.footer p {
+    line-height: 22px;
 }
