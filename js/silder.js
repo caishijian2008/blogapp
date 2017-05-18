@@ -32,6 +32,7 @@ obj.id='topnav_current';
     var uname = sessionStorage.getItem('username');
     document.getElementById("uname").innerHTML = uname;
     $('h5 a').click(function() {
+      alert("你已经下线了！");
       sessionStorage.clear();
     });
   } else {

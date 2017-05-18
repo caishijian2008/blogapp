@@ -138,5 +138,6 @@ table {
 
 .postmsg form input[type="submit"] {
     margin: 0 auto;
+    background-color: #e9edf1;
 }
 

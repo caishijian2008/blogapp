@@ -55,6 +55,19 @@
     .blogs ul {
         width: 62%;
     }
+
+    .footer {
+        height: 70px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px 0;
+        /*box-shadow: -2px -1px 5px #666;*/
+        text-align: center;
+    }
+
+    .footer p {
+        line-height: 22px;
+    }
 }
 
 @media screen and (max-width:598px) {
@@ -122,6 +135,18 @@
     .blogs ul {
         width: 62%;
     }
+    .footer {
+        height: 25px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 15px 0;
+        /*box-shadow: -2px -1px 5px #666;*/
+        text-align: center;
+    }
+
+    .footer p {
+        line-height: 22px;
+    }
 }
 
 @media screen and (max-width:480px) {
@@ -144,13 +169,15 @@
     aside,
     header h1,
     header h2,
+    /*.leftheader,
+    .rightheader,*/
     .dateview,
     .banner,
     .bloglist h2,
     .blogs figure img,
     .newblog figure img,
     .newblog .autor {
-        display: none
+        display: none;
     }
     nav {
         height: auto;
@@ -184,6 +211,7 @@
     .blogs figure {
         width: 100%;
         float: none;
+        display: none;
     }
     .blogs ul,
     .newblog ul {
@@ -192,5 +220,18 @@
     }
     .blogs {
         margin: 0 10px 10px 10px;
+    }
+
+    .footer {
+        height: 25px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px 0;
+        /*box-shadow: -2px -1px 5px #666;*/
+        text-align: center;
+    }
+
+    .footer p {
+        line-height: 22px;
     }
 }
