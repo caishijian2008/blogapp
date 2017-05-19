@@ -30,15 +30,20 @@ obj.id='topnav_current';
 
   if (typeof(Storage) !== "undefined") {
     var uname = sessionStorage.getItem('username');
-    document.getElementById("uname").innerHTML = uname;
-    $(".inout").attr("style","display:none;");
-    $(".logout").attr("style","display:;");
-    $('.logout').click(function() {
-      alert("你已经下线了！");
-      sessionStorage.clear();
+    if((sessionStorage.length <= 0) || uname == null || uname == "") {
       $(".inout").attr("style","display:;");
       $(".logout").attr("style","display:none;");
-    });
+    } else {
+      document.getElementById("uname").innerHTML = uname;
+      $(".inout").attr("style","display:none;");
+      $(".logout").attr("style","display:;");
+      $('.logout').click(function() {
+        alert("你已经下线了！");
+        sessionStorage.clear();
+        $(".inout").attr("style","display:;");
+        $(".logout").attr("style","display:none;");
+      });
+    }
   } else {
     alert("你的浏览器不支持web存储！");
 		console.log("你的浏览器不支持web存储！");
