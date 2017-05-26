@@ -73,12 +73,13 @@ $(document).ready(function($) {
         // if (txtPassword.length <= 0) { return ; } 
         // if (txtPassword != txtRepassword ) { return ; } 
         // if (txtRepassword.length <= 0) { return ; } 
-
+        var param = 'http://localhost:8080/blogserv/getUsersServlet?action=register';
         $.ajax({
-            url: 'http://localhost:8080/blogserv/getUsersServlet?action=register',
             type: 'POST',
+            url: param,
             dataType: 'json',
-            cache: false,
+            // cache: false,
+            timeout: 5000,
             data: {
                 "email": txtEmail,
                 "username": txtUsername,
@@ -94,17 +95,7 @@ $(document).ready(function($) {
                 // window.location.href="./register.html";
                 location.href="./register.html";
             }
-        })
-        // .done(function(msg) {
-        //     console.log("success: "+msg.status);
-        // })
-        // .fail(function(msg) {
-        //     console.log("error: "+msg.status);
-        // })
-        // .always(function() {
-        //     console.log("complete");
-        // })
-        ;
+        });
         
     });
 

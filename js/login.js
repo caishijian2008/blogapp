@@ -42,7 +42,6 @@ jQuery(document).ready(function($) {
 			sessionStorage.setItem("username",txtUsername);
 			// alert(sessionStorage.getItem('username'));
             
-			// var param = "http://localhost:8080/blogserv/loginServlet?action=login&username="+txtUsername+"&password="+txtPassword;
 			var param = "http://localhost:8080/blogserv/loginServlet?action=login";
 			// alert(param);
 			$.ajax({
