@@ -99,14 +99,6 @@
     opacity: 1
 }
 
-.dateview {
-    position: absolute;
-    left: -125px;
-    top: 0px;
-    z-index: 1;
-    color: #F5F5F5;
-}
-
 .newblog figure {
     float: right;
     width: 25%;
@@ -362,7 +354,7 @@ a.readmore {
 }
 
 .box_c span {
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .box_c span a {
