@@ -19,7 +19,7 @@
 }
 
 .about_h a:hover {
-    color: #e41635
+    color: #e41635;
 }
 
 .newblog {
@@ -34,7 +34,7 @@
 .newblog h3 {
     font-size: 14px;
     font-weight: bold;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .newblog h3 a {
@@ -42,7 +42,7 @@
 }
 
 .newblog h3 a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .newblog ul {
@@ -68,7 +68,7 @@
 }
 
 .newblog:hover::before {
-    background: #474645
+    background: #474645;
 }
 
 .dateview {
@@ -96,7 +96,7 @@
 }
 
 .newblog:hover::after {
-    opacity: 1
+    opacity: 1;
 }
 
 .newblog figure {
@@ -123,21 +123,25 @@
 }
 
 a.readmore {
-    color: #f55f77;
-    margin-left: 10px;
-    font-weight: bold
+    color: #fff;
+    margin-right: 10px;
+    margin-top: 2px;
+    /*font-weight: bold;*/
+    float: right;
+    background-color: #e41637;
+    padding: 2px 20px 2px 20px;
 }
 
 .autor {
     color: #8c8d8d;
     line-height: 26px;
     background: url(../images/5794.png) no-repeat left;
-    padding-left: 25px
+    padding-left: 25px;
 }
 
 .autor a {
     color: #0f9c7c;
-    font-weight: bold
+    font-weight: bold;
 }
 
 .autor span {
@@ -163,7 +167,7 @@ a.readmore {
     border-radius: 50%;
     width: 26px;
     text-align: center;
-    display: inline-block
+    display: inline-block;
 }
 
 .page a {
@@ -173,7 +177,7 @@ a.readmore {
     border-radius: 50%;
     width: 26px;
     text-align: center;
-    display: inline-block
+    display: inline-block;
 }
 
 
@@ -202,7 +206,7 @@ a.readmore {
     display: inline-block;
     margin-bottom: 2px;
     height: 40px;
-    line-height: 40px
+    line-height: 40px;
 }
 
 .rnav li a {
@@ -211,23 +215,23 @@ a.readmore {
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -o-transition: all 1s;
-    transition: all 1s
+    transition: all 1s;
 }
 
 .rnav1 {
-    background: #e41637
+    background: #e41637;
 }
 
 .rnav2 {
-    background: #f16b17
+    background: #f16b17;
 }
 
 .rnav3 {
-    background: #0f9c7c
+    background: #0f9c7c;
 }
 
 .rnav4 {
-    background: #46ce14
+    background: #46ce14;
 }
 
 .rnav li a:hover {
@@ -251,11 +255,11 @@ a.readmore {
     padding: 0 0 0 30px;
     border-radius: 0 20px 20px 0;
     text-shadow: rgba(0, 0, 0, .65) 1px 1px;
-    background: #0f9c7c
+    background: #0f9c7c;
 }
 
 .ph_news ul {
-    margin: 10px
+    margin: 10px;
 }
 
 .ph_news li {
@@ -274,7 +278,7 @@ a.readmore {
 
 .ph_news li a:hover,
 .pl_n dd a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .ph_n li span {
@@ -282,13 +286,13 @@ a.readmore {
     font-family: "΢���ź�";
     color: #FFF;
     background: #404040;
-    padding: 0 5px
+    padding: 0 5px;
 }
 
 .ph_n li span.num1,
 .ph_n li span.num2,
 .ph_n li span.num3 {
-    background: #f16b17
+    background: #f16b17;
 }
 
 
@@ -305,16 +309,16 @@ a.readmore {
     line-height: 22px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .pl_n dd a {
-    color: #555454
+    color: #555454;
 }
 
 .pl_n time {
     color: #066;
-    margin-left: 10px
+    margin-left: 10px;
 }
 
 .pl_n dt {
@@ -326,7 +330,7 @@ a.readmore {
     height: 50px;
     margin-right: 10px;
     border-radius: 50%;
-    transition: all 1s
+    transition: all 1s;
 }
 
 .pl_n dt img:hover {
@@ -338,7 +342,7 @@ a.readmore {
 }
 
 .index_about {
-    margin: 20px
+    margin: 20px;
 }
 
 .c_titile {
@@ -350,7 +354,7 @@ a.readmore {
 
 .box_c {
     color: #999;
-    text-align: center
+    text-align: center;
 }
 
 .box_c span {
@@ -367,16 +371,16 @@ ul.infos {
     line-height: 28px;
     font-size: 14px;
     text-indent: 2em;
-    color: #525554
+    color: #525554;
 }
 
 ul.infos p {
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 ul.infos p img {
     display: block;
-    margin: auto
+    margin: auto;
 }
 
 .keybq {
@@ -389,7 +393,7 @@ ul.infos p img {
 }
 
 .keybq span {
-    color: #099
+    color: #099;
 }
 
 .nextinfo {
@@ -398,7 +402,7 @@ ul.infos p img {
 
 .nextinfo a,
 .otherlink li a {
-    color: #756f71
+    color: #756f71;
 }
 
 .otherlink h2 {
@@ -407,7 +411,7 @@ ul.infos p img {
     font-size: 12px;
     background: url(../images/5794.png) 10px center no-repeat;
     padding-left: 40px;
-    color: #099
+    color: #099;
 }
 
 .otherlink ul {
@@ -426,7 +430,7 @@ ul.infos p img {
 
 .otherlink li a:hover,
 .nextinfo a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .template {
@@ -442,7 +446,7 @@ ul.infos p img {
     display: block;
     clear: both;
     margin-bottom: 10px;
-    position: relative
+    position: relative;
 }
 
 .template h3 p {
@@ -487,7 +491,7 @@ ul.infos p img {
     width: 142px;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 14px
+    height: 14px;
 }
 
 .template li:hover {
@@ -500,5 +504,5 @@ a.more {
     right: 0;
     top: 4px;
     color: #666;
-    font-size: 12px
+    font-size: 12px;
 }
