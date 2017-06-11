@@ -79,12 +79,12 @@ span.log {
   margin-left: 0;
 }
 
-.user,.user-in{
+.user,.user-in {
  border: 1px solid #EDEDED;
   border-top: 2px solid #EDEDED;
   background:#fff;
-   border-radius: 5px;
-    margin-bottom: 1em;
+  border-radius: 5px;
+  margin-bottom: 1em;
 }
 .user input[type="text"],.user-in input[type="password"] {
   background: none;
@@ -94,14 +94,21 @@ span.log {
   /* color: #BBBBBB; */
   padding: 17px 15px 17px 15px;
   border: none;
-  width: 100%;
-  height: inherit;
+  width: 83%;
+  height: 18%; /*inherit*/
   -webkit-appearance: none;
 }
 
 .user .error, .user-in .error {
   color: red;
   
+}
+
+.user label,.user-in label {
+  font-weight: bold;
+  color: #7a7a7a;
+  height: 25px;
+  line-height: 25px;
 }
 
 label.checkbox {
@@ -177,7 +184,7 @@ label.checkbox {
 	color: #2da5da;
 }
 .keepme.checkbox input:checked + i,
-.keepme . input:checked + i {
+.keepme  input:checked + i {
 	border-color: #2da5da;	
 }
 .keepme .rating input:checked ~ label {

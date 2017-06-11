@@ -50,7 +50,7 @@ jQuery(document).ready(function($) {
 				dataType: "json",
 				data: {
 					"username": txtUsername,
-                    "password": txtPassword
+          "password": txtPassword
 				},
 				success: function (data) {
 					if (data == false) {
@@ -63,12 +63,27 @@ jQuery(document).ready(function($) {
 						location.href = "./index.html";
 					}
 				},
-                error: function (jqXHR) {
+        error: function (jqXHR) {
 					alert("错误: "+jqXHR.statusText);
 					// window.location.href = "./login.html";
 					location.href = "./login.html";
 				}
 			});
+
+			// var request = new XMLHttpRequest();
+			// request.open("POST", param, true);
+			// request.setRequestHeader("Content-type", "application/x-www-from-urlencoded");
+			// request.setRequestHeader("Access-Control-Allow-Origin", "*");
+			// request.send("username="+txtUsername+"&password="+txtPassword);
+      // request.onreadystatechange = function() {
+			// 	if((request.readyState ===4) && (request.status === 200)) {
+			// 		alert('asd'+ request.responseText);
+			// 	} else {
+			// 		alert("error: " + request.status);
+			// 		location.href = "./login.html";
+			// 	}
+			// }
+
 		});
 	} else {
 		alert("你的浏览器不支持web存储！");

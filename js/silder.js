@@ -42,6 +42,7 @@ obj.id='topnav_current';
         sessionStorage.clear();
         $(".inout").attr("style","display:;");
         $(".logout").attr("style","display:none;");
+        location.reload();
       });
     }
   } else {
